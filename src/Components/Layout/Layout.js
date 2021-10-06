@@ -9,9 +9,10 @@ const Layout = (props) => {
             <Header />
             <div className='page-body'>
                 {props.children}
+                <Footer />
             </div>
 
-            <Footer />
+            
 
         </Fragment>
     );
