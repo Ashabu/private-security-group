@@ -80,6 +80,18 @@
     width: 100%;
     margin-top: 70px;
     height: calc(100vh + 80px);
-    overflow: auto;
+    overflow-Y: auto;
+    overflow-x: hidden;
 
+}
+
+.app-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #112a52;
 }

@@ -16,40 +16,34 @@ const FirstContainer = (props) => {
 
     const [text, setText] = useState(texts[0]);
 
-    // useEffect(() => {
-    //     animation();
+    useEffect(() => {
+        handleAnimationText();
 
-    //     return () => {
-    //         clearInterval(animClassInterval.current);
-    //         clearInterval(animChangeInterval);
-    //     }
-    // }, []);
+        return () => {
+            clearInterval(animClassInterval.current);
+            clearInterval(animChangeInterval);
+        }
+    }, []);
 
-    // const handleAnimationText = () => {
-    //     for (let i = 0; i < texts.length; i++) {
-    //         setText(texts[i]);
-    //     };
-    // };
+    const handleAnimationText = () => {
+        let i = 0;
+        const el = document.getElementsByClassName('animated-text');
+
+        if (animClassInterval.current) clearInterval(animClassInterval.current);
+        animClassInterval.current = setInterval(() => {
+            el[0].classList.remove('anim-typewriter');
+        }, 4800);
+        if (animChangeInterval.current) clearInterval(animChangeInterval.current)
+        animChangeInterval.current = setInterval(() => {
+            el[0].classList.add('anim-typewriter');
+            i > texts.length - 1 ? i = 0 : i++
+            setText(texts[i])
+        }, 5000);
+
+    };
 
 
-    // const animation = (i = 0) => {
 
-    //     const fn = () => {
-    //         handleAnimationText();
-    //         const el = document.getElementsByClassName('animated-text');
-    //         el[0].classList.add('anim-typewriter');
-    //         if (animClassInterval.current) clearInterval(animClassInterval.current);
-    //         animClassInterval.current = setInterval(() => {
-    //             el[0].classList.remove('anim-typewriter');
-    //         }, 4800);
-    //     }
-    //     fn();
-    //     if (animChangeInterval.current) clearInterval(animChangeInterval.current);
-    //     animChangeInterval.current = setInterval(() => {
-    //         i == 4 ? i = 0 : i++;
-    //         fn();
-    //     }, 5000)
-    // }
 
 
 
