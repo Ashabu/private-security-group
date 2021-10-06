@@ -1,3 +1,4 @@
+
 .app-header {
     display: flex;
     justify-content: space-between;
@@ -7,9 +8,9 @@
     position: fixed;
     top: 0;
     padding: 20px;
-    border-bottom: 1px solid black;
     box-sizing: border-box;
     background-color: #112a52;
+    z-index: 10;
 
     .app-header-left {
         width: 100%;
@@ -37,11 +38,17 @@
 
                     padding: 10px;
                     &:hover {
-                        border-bottom: 2px solid #FFFFFF;
+                        border-bottom: 2px solid #fec67f;
+                        
                     }
                     a {
                         text-decoration: none;
                         color: #FFFFFF;
+                        &:hover {
+                            color: #fec67f;
+                        }
+
+
                         
                     }
                 }
@@ -72,7 +79,7 @@
 .page-body {
     width: 100%;
     margin-top: 70px;
-    background: rebeccapurple;
     height: calc(100vh + 80px);
+    overflow: auto;
 
 }
