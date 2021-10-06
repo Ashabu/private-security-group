@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.scss';
+import Routing from './Routing/Routing';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <Routing />
     </div>
   );
 }
