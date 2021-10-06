@@ -16,6 +16,8 @@ const FirstContainer = (props) => {
 
     const [text, setText] = useState(texts[0]);
 
+
+
     useEffect(() => {
         handleAnimationText();
 
@@ -25,6 +27,8 @@ const FirstContainer = (props) => {
         }
     }, []);
 
+
+
     const handleAnimationText = () => {
         let i = 0;
         const el = document.getElementsByClassName('animated-text');
@@ -32,13 +36,13 @@ const FirstContainer = (props) => {
         if (animClassInterval.current) clearInterval(animClassInterval.current);
         animClassInterval.current = setInterval(() => {
             el[0].classList.remove('anim-typewriter');
-        }, 4800);
+        }, 5200);
         if (animChangeInterval.current) clearInterval(animChangeInterval.current)
         animChangeInterval.current = setInterval(() => {
             el[0].classList.add('anim-typewriter');
             i > texts.length - 1 ? i = 0 : i++
             setText(texts[i])
-        }, 5000);
+        }, 5300);
 
     };
 
