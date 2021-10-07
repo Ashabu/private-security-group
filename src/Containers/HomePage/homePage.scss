@@ -1,17 +1,55 @@
 .cont-1-wrap {
     width: 100%;
-    position: relative;
 
-    img {
-        width: 100%;
+    .cont-background {
+        position: relative;
+        img {
+            width: 100%;
+        }
     }
+
+    .cont-body {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 20px;
+
+        .subcont-title {
+            h1 {
+                font-size: 30px;
+                font-weight: 700;
+                color: #FFFFFF;
+            }
+        }
+
+        .subcont-cont {
+            p {
+                max-width: 50ch;
+                color: #FFFFFF; 
+                font-size: 18px
+            }
+        }
+        
+        .subcont-footer {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            p {
+                max-width: 47ch;
+                color: #FFFFFF;
+                
+            }
+        }
+    }
+    
     
     .cont-1 {
         width: 100%;
-    position: absolute;
-    top: 45%;
-    z-index: 10;
-    left: 25%;
+        
         
         h1 {
             color: #FFFFFF;
@@ -19,98 +57,61 @@
 
         
     }
-    .animated-text {
-        position: absolute;
-        top: 30%;  
-        left: 11%;
-        width: 50%;
-        margin: 0 auto;
-        border-right: 2px solid rgba(255,255,255,.75);
-        font-size: 22px;
-        white-space: nowrap;
-        overflow: hidden;
-        transform: translateY(-50%);    
-
-        
-         
-    }
-    .anim-typewriter{
-        animation: typewriter 4s steps(44) 1s 1 normal both,
-                   blinkTextCursor 500ms steps(44) infinite normal;
-      }
-}
-
-.cont-2 {
-    width: 100%; 
-    padding: 40px 20px;
-    background-color: #9aacce;
-    box-sizing: border-box;
-}
-
-        .cont-wrap {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-
-            .cont-left {
-                width: 100%;
-                max-width: 500px;
-                height: auto;
-                border-radius: 10px;
-                overflow: hidden;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-                
-            }
-
-            .cont-right{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                p {
-                    max-width: 60ch;
-                    color: #FFFFFF;
-                }
-            }
-        }
-
-
     
+}
 
-.cont-3 {
+.cont {
     width: 100%; 
-    padding: 40px 20px;
-    background-color: #9aacce;
+    padding: 20px 40px;
     box-sizing: border-box;
-    height: auto;
-    .cont-left {
-        width: 100%;
-        max-width: 630px;
-        height: auto;
-        border-radius: 10px;
-        overflow: hidden;
 
-        img {
+    h3 {
+        text-align: center;
+        font-size: 30px;
+        color: #000;
+    }
+
+    .cont-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    
+        .cont-left {
             width: 100%;
+            max-width: 900px;
             height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+    
+            img {
+                width: 100%;
+                height: auto;
+            }
+    
+        }
+    
+        .cont-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+                max-width: 63ch;
+                color: #000;
+                font-size: 22px;
+                font-weight: 700;
+                font-style: normal;
+            }
         }
     }
 }
 
-       
 
 
-.cont-4 {
-    width: 100%; 
-    padding: 40px 20px;
-    background-color: #9aacce;
-    box-sizing: border-box;
-}
+
+
+
 
 
 @keyframes typewriter{
@@ -118,7 +119,7 @@
     to{width: 50%;}
   }
   @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
+    from{border-right-color: rgba(255,255,255, 0.75);}
     to{border-right-color: transparent;}
   }
 

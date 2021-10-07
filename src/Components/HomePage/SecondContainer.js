@@ -8,7 +8,7 @@ const SecondContainer = (props) => {
 
 
     return (
-        <div className='cont-2'>
+        <div className='cont'>
             <div className='cont-wrap'>
                 <div className='cont-left'>
                     <img src='../../Assets/Images/HomePage/2.jpg' />

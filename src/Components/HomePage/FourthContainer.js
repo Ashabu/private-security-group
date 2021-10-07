@@ -8,7 +8,7 @@ const FourthContainer = (props) => {
 
 
     return (
-        <div className='cont-4'>
+        <div className='cont'>
             <div className='cont-wrap'>
                 <div className='cont-left'>
                     <img src='../../Assets/Images/HomePage/4.png' />
@@ -18,7 +18,7 @@ const FourthContainer = (props) => {
                     <p></p>
                 </div>
             </div>
-            <h3 style={{ textAlign: 'center', color: '#FFFFFF' }}>  იყავი ინფორმირებული და დაცული! </h3>
+            <h3 >  იყავი ინფორმირებული! იყავი დაცული! </h3>
 
         </div>
     );
