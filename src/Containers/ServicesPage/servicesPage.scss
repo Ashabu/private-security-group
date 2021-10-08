@@ -1,0 +1,44 @@
+.se-cont {
+    width: 100%;
+    height: calc(100vh - 170px);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+
+    .se-cont-right {
+        
+        width: 100%;
+        margin: 0 5px;
+        .se-item {
+            width: 100%;
+            max-width: 1024px;
+            border: 2px solid #cfcfcf;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 8px 0;
+            font-size: 15px;
+            cursor: pointer;
+            &:hover {
+                background-color:#112a52 ;
+                color: #FFFFFF;
+                font-weight: bold;
+            }       
+    
+        }
+    }
+
+    .se-cont-left {
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 5px;
+        img {
+            width: 100%;
+        }
+    }
+    
+
+    
+    
+}
