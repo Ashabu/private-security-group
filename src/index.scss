@@ -3,6 +3,19 @@
   src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 }
 
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url('./Assets/fonts/Montserrat-Regular.ttf') format("woff");
+}
+@font-face {
+  font-family: "Montserrat-Medium" ;
+  src: url("./Assets/fonts/Montserrat-Medium.ttf") format("woff");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./Assets/fonts/Montserrat-Bold.ttf") format("woff");;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto Slab',

@@ -1,0 +1,24 @@
+.au-cont {
+    width: 100%;
+    display: flex;
+    height: calc(100vh - 170px);
+    .au-cont-left {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .au-cont-right {
+        padding: 40px 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 20px;
+        }
+        
+    }
+}

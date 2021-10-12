@@ -1,0 +1,25 @@
+.type-writter {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    width: 603px;
+    flex-wrap: wrap;
+
+    .symbol {
+        display: inline-block;
+        font-size: 28px;
+    }
+
+    .blink-cursor {
+        height: 30px;
+        border-right: 3px solid white;
+        animation: blinkTextCursor linear infinite 0.8s;
+
+    }
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255, 0.75);}
+    to{border-right-color: transparent;}
+  }
