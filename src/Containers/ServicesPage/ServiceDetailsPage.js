@@ -8,13 +8,15 @@ const ServiceDetailsPage = (props) => {
     return (
         <Layout>
             <div className = 'se-cont-det' style={{ backgroundImage: `url(../../Assets/Images/services/${imgUrl.trim()}.jpg)`}}>
-                {/* <div style={{width: '50%'}}>
-                    <img style={{width: '100%', maxWidth: 500
-                }} src = {`../../Assets/Images/services/${imgUrl.trim()}.jpg`} />
-                </div> */}
-                <div  >
+                <div style={{width: '50%'}}>
+                
+                </div>
+                <div  className = 'se-cont-det-right'>
+                    <div className = 'text'>
                     <p>{title}</p>
                     <p>{description}</p>
+                    </div>
+                    
                 </div>
 
             </div>

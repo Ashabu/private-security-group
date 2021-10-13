@@ -1,7 +1,8 @@
 import React from 'react';
 import '../../Containers/ServicesPage/servicesPage.scss';
 import ServiceItem from '../ServicesPage/ServiceItem';
-import { Link } from 'react-router-dom';
+import { Link ,useHistory } from 'react-router-dom';
+
 
 const services =[
     {
@@ -32,7 +33,7 @@ const services =[
 
 
 const ServicesContainer = (props) => {
-
+    const history = useHistory();
     const styles = {
         isContentVisible: {
             position: 'relative',
@@ -52,7 +53,7 @@ const ServicesContainer = (props) => {
                 <p>აქ რამე ტექსტი რასაც მეტყვი </p>
                 <div className='cont-right services-items' style={props.visible? styles.isContentVisible : styles.isContentNotVisible} >
                 {services?.map((s, i) =>(
-                <ServiceItem  key = {i} services = {s} onClick={() => { goDetail(s);}}/>
+                <ServiceItem  key = {i} services = {s} onClick={() => {history.push('/services')}}/>
             ))}
                 </div>
             </div>
