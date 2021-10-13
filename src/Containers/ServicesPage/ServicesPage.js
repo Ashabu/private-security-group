@@ -25,9 +25,7 @@ const ServicesPage = (props) => {
         
     }, [])
 
-    // onClick={() => {
-    //     goDetail(s);
-    // }}
+    
 
 
     console.log(history.location)
@@ -49,7 +47,7 @@ console.log(serviceDetails)
             
             <div className='se-cont'>
             {services?.map((s, i) =>(
-                <ServiceItem  key = {i} services = {s}/>
+                <ServiceItem  key = {i} services = {s} onClick={() => { goDetail(s);}}/>
             ))}
             </div>
             </div>

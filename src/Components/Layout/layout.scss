@@ -9,7 +9,7 @@
     top: 0;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #112a52;
+    background-color: #112a52d6;
     z-index: 10;
 
     .app-header-left {
@@ -67,6 +67,11 @@
                     font-weight: 400;
                     cursor: pointer ;
 
+                    span{
+                        display: inline-block;
+                        margin-top: 10px;
+                    }
+
                 }    
             }
         }
@@ -76,20 +81,19 @@
 
 .page-body {
     width: 100%;
-    background-image: linear-gradient(to bottom black, red );
-    
-
+    height: auto;
 }
 
 .app-footer {
     display: flex;
     position: relative;
+    bottom: 0;
     justify-content: space-between;
     align-items: center;
     height: 70px;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #112a52;
+    background-color: #112a52d6;
     color: #FFFFFF;
 }

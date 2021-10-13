@@ -2,6 +2,10 @@
   font-family: 'Roboto Slab';
   src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 }
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./Assets/fonts/Montserrat-Bold.ttf") format("woff");;
+}
 
 @font-face {
   font-family: "Montserrat-Regular";
@@ -12,8 +16,13 @@
   src: url("./Assets/fonts/Montserrat-Medium.ttf") format("woff");
 }
 @font-face {
-  font-family: "Montserrat-Bold";
-  src: url("./Assets/fonts/Montserrat-Bold.ttf") format("woff");;
+  font-family: "LeStudio-Bold";
+  src: url("./Assets/fonts/Le-Studio-h.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "LeStudio-Medium" ;
+  src: url("./Assets/fonts/Le-Studio.ttf") format("woff");
 }
 
 body {
@@ -25,7 +34,7 @@ body {
 }
 *{
   box-sizing: border-box;
-  font-family: 'Roboto Slab',
+  font-family: 'LeStudio-Medium',
   sans-serif;
 }
 ul li {

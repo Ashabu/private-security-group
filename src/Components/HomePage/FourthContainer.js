@@ -14,11 +14,17 @@ const FourthContainer = (props) => {
                     <img src='../../Assets/Images/HomePage/4.png' />
                 </div>
                 <div className='cont-right'>
+                    <div className = 'text'>
                     <p>გაქვთ კითხვები სამართლებრივ სფეროში ან გჭირდებათ იურისტის დახმარება? </p>
-                    <p style ={{ margin: '0 0 0 20px'}}>- ჩვენ გთავაზობთ იურიდიულ მომსახურებას სამართლის სხვადასხვა სფეროში.</p>
+                    <p> ჩვენ გთავაზობთ იურიდიულ მომსახურებას სამართლის სხვადასხვა სფეროში.</p>
+                    </div>
+                    
                 </div>
             </div>
-            <h3 >  იყავი ინფორმირებული! იყავი დაცული! </h3>
+            <div className = 'text'>
+                <h3 style= {{paddingTop: 10, paddingBottom: 10}}>  იყავი ინფორმირებული! იყავი დაცული! </h3>
+            </div>
+            
 
         </div>
     );
