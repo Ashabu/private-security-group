@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+    const [openMenu, setOpenMenu ] = useState(false);
     return (
         <div className='app-header'>
+            <div className = {openMenu? 'menu-btn open' : 'menu-btn'} onClick={()=> setOpenMenu(!openMenu)}>
+                <div className = 'burger'></div>
+            </div>
+            <div className = {openMenu? 'dropdown open' : 'dropdown'}>
+                <div className = 'dropwdown-list'>
+                <ul>
+                        <li>
+                            <Link to='/'>მთავარი</Link>
+                        </li>
+                        <li>
+                            <Link to='/aboutUs'>ჩვენს შესახებ</Link>
+                        </li>
+                        <li>
+                            <Link to='/services' >სერვისები</Link>
+                        </li>
+                        <li>
+                            <Link to='/contact'>კონტაქტი</Link>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
             <div className='app-header-left'>
                 <span>Private &amp;	Security Group</span>
             </div>

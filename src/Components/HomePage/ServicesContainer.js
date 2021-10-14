@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../Containers/ServicesPage/servicesPage.scss';
 import ServiceItem from '../ServicesPage/ServiceItem';
 import { Link ,useHistory } from 'react-router-dom';
@@ -59,6 +59,10 @@ const ServicesContainer = (props) => {
             top: 500
         }
     }
+
+    useEffect(() => {
+        console.log('mounted')
+    }, [0])
 
     return (
         <div id="service-cont" className='cont'>

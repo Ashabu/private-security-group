@@ -13,7 +13,19 @@
         padding:10px;
         border-radius: 10px;
         margin: 20px 0;
+        position: relative;
         
+        &.animation1 {
+            animation: text1 1.5s ease-in;
+        }
+    
+        &.animation2 {
+            animation: text2 2.5s ease-in;
+        }
+    
+        &.animation3 {
+            animation: text3 3.5s ease-in;
+        }
 
       
         p {
@@ -31,11 +43,12 @@
     .cont-body {
         position: relative;
         width: 100%;
-        height: calc(100% - 80px);
+        height: calc(100% - 60px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 0px 20px;
+        overflow: hidden;
 
         .search-cont {
             margin:0 auto;
@@ -98,6 +111,7 @@
         text-align: center;
         font-size: 30px;
         color: #ffffff;
+        margin: 0;
     }
 
     .cont-wrap {
@@ -109,6 +123,7 @@
         overflow: hidden;
         position: relative;
         padding: 30px 20px;
+        background-size: cover;
 
         &.services-items {
             
@@ -187,10 +202,10 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     background-color: #ffffff00;
     transition: all 1.5s;
-
     p {
         line-height: 1.5;
     }
+    
     
 }
 
@@ -200,4 +215,32 @@
     width: auto;
     text-align: center;
 
+}
+
+
+
+
+@keyframes text1 {
+    0% {
+        right: 510px;
+    }
+    100% {
+        right: 0;
+    }
+}
+@keyframes text2 {
+    0% {
+        right: 510px;
+    }
+    100% {
+        right: 0;
+    }
+}
+@keyframes text3 {
+    0% {
+        left: 510px;
+    }
+    100% {
+        left: 0;
+    }
 }

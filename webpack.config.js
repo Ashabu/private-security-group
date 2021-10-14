@@ -73,7 +73,7 @@ module.exports = (env, argv) => {
                 disableDotRule: true
             },
             port: 9000,
-            // host: '192.168.100.9'
+            // host: '192.168.0.101'
         },
         devtool: !isProd && 'source-map',
         plugins: getPlugins(config, isProd, analyze),

@@ -1,0 +1,44 @@
+.con-wrap {
+    background-color: #000;
+    .con-cont {
+        width: 100%;
+        display: flex;
+        height: calc(100vh - 178px);
+        background-image: url('../../Assets/Images/contact-us.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    
+        .con-cont-right {
+            padding: 40px 20px;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            
+    
+            .text-con-us {
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px 10px;
+                width: 100%;
+                max-width: 60%;
+                box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+                background-color: #ffffff1f;
+    
+                p {
+                    font-size: 20px;
+                    color: #000;
+                    font-weight: bold;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+
+

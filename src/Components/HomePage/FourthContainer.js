@@ -57,7 +57,7 @@ const FourthContainer = (props) => {
 
     return (
         <div id="container-1" className='cont'>
-            <div className='cont-wrap' style={{ backgroundImage: `url(../../../../Assets/Images/HomePage/versionn_3.jpg)` }}>
+            <div className='cont-wrap' style={{ backgroundImage: `url(../../../../Assets/Images/HomePage/versionn_5.jpg)` }}>
                 <div className='cont-left'>
                     <img src='../../Assets/Images/HomePage/4.png' />
                 </div>
@@ -71,8 +71,8 @@ const FourthContainer = (props) => {
 
                 </div>
             </div>
-            <div className='text' style={{ maxWidth: '100%' }}>
-                <h3 style={{ paddingTop: 10, paddingBottom: 10 }}>  იყავი ინფორმირებული! იყავი დაცული! </h3>
+            <div className='text' style={{ maxWidth: '100%', margin: 0}}>
+                <h3 style={{paddingTop: 10, paddingBottom: 10 }}>  იყავი ინფორმირებული! იყავი დაცული! </h3>
             </div>
 
 
