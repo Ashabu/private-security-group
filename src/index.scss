@@ -34,8 +34,10 @@ body {
 }
 *{
   box-sizing: border-box;
-  font-family: 'LeStudio-Medium',
-  sans-serif;
+  font-family: 'LeStudio-Medium', sans-serif;
+  p {
+    margin: 0;
+  }
 }
 ul li {
   list-style: none;

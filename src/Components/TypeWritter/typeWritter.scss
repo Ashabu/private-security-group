@@ -1,10 +1,13 @@
 .type-writter {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     color: #ffffff61;
     padding: 20px;
-    width: 603px;
-    flex-wrap: wrap;
+   
+    &.swap {
+        position: absolute;
+        right: 0;
+    }
 
     .symbol {
         display: inline-block;

@@ -34,7 +34,7 @@ function getPlugins(config, isProd, analyze) {
             tokenURL: config.token_URL,
             hash: false,
             minify: false,
-            //favicon: "./public/favicon.ico"
+            favicon: "./public/favicon.ico"
         }),
         new CopyWebpackPlugin([
             { from: './src/Assets/', to: './Assets/', force: true }

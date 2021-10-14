@@ -10,6 +10,7 @@ import ServicesContainer from '../../Components/HomePage/ServicesContainer';
 const HomePage = () => {
 
     const [isVisible, setIsVisible] = useState(false);
+   
 
     useEffect(() => {
        window.addEventListener('scroll', handleScrollListener);

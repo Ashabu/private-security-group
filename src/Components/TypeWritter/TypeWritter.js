@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createRef } from 'react';
+import React, { useEffect, useState, createRef, useRef } from 'react';
 import './typeWritter.scss';
 import SymbolComponent from './SymbolComponent';
 
@@ -7,16 +7,17 @@ const TypeWritter = (props) => {
     //let _string = "სად იმყოფება ჩემი ინტერესის ობიექტი? რა არის მისი საკონტაქტო, საპასპორტო და სხვა მონაცემები?";
 
     let textString = props.text;
-    console.log(props.text)
 
     const [stringArray, setStringArray] = useState([]);
+    const [ isFullWidth, setIsFullWidht] = useState(false);
     const typeWriterTimeout = createRef(); 
+    const divResize = createRef()
 
     const iterate = (index) => {
         
-        if (index === props.text.length) {
+        if (index === textString.length) {
             setStringArray([])
-            props.callBack(props.index);
+            props.callBack();
             return;
         }
         setStringArray(prevArray => [...prevArray, textString[index]]);
@@ -35,9 +36,19 @@ const TypeWritter = (props) => {
         };
     }, [textString]);
 
+    useEffect(() => {
+        if(divResize.current.offsetWidth > 603) {
+            setIsFullWidht(true);
+        } else {
+            setIsFullWidht(false)
+        }
+        
+    }, [stringArray])
+
+   
 
     return (
-        <div className='type-writter' style={{  }}>
+        <div className={isFullWidth? 'type-writter swap' : 'type-writter'} ref = {divResize}>
             {stringArray?.map((str, i) =>
                 
                 <SymbolComponent key={str + i}>{str}</SymbolComponent>
@@ -45,6 +56,9 @@ const TypeWritter = (props) => {
             <SymbolComponent>
             <div className='blink-cursor'></div>
             </SymbolComponent>
+
+
+
         </div>
     );
 };

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import './animatedSearch.scss';
 import TypeWritter from '../TypeWritter/TypeWritter';
 
-const AnimatedSearch = () => {
+const AnimatedSearch = (props) => {
 
     const texts = [
         'ხომ არ მითვალთვალებენ?',
@@ -14,23 +14,22 @@ const AnimatedSearch = () => {
     ]
 
     const [text, setText ] = useState(texts[0]);
-    const [index, setIndex ] = useState(1)
 
-    const handleChangeText = () => {
-        
-        let i = index;
-        i++
-        setText(texts[i]);
-        setIndex(i);
-    }
-    console.log(index)
+    useEffect(() => {
+        setText(texts[props.index])
+    }, [props.index])
+   
 
     return (
         <div className = 'div-inp'>
-            <TypeWritter text = {text} callBack = {handleChangeText} index = {index}/>
+            <div style={{width: 603, position: 'relative'}}>
+                
+            <TypeWritter text = {text} callBack = {props.onSetIndex} />
+            </div>
             <div className = 'loupe'>
                 <img src = '../../Assets/Images/loupe.png' />
             </div>
+            
         </div>
     );
 };

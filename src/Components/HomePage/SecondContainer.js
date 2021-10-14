@@ -6,35 +6,38 @@ const SecondContainer = (props) => {
 
     const styles = {
         isContentVisible: {
-            position: 'absolute',
-            top: -300,
-            left: '30%'
+            position: 'relative',
+            top: -550,
+            left: 50
         },
 
         isContentNotVisible: {
-            position: 'absolute',
-            top: 400,
-            left: '30%'
+            position: 'relatve',
+            top: 220,
+            left: 50
         }
     }
 
 
 
     return (
-        <div id="service-cont" className='cont' style={{paddingTop: 20, paddingBottom: 0}}>
-            <div className='cont-wrap services-items' style ={{position: 'relative'}}>
-                <div className='cont-left'>
-                    <img src='../../Assets/Images/HomePage/2.jpg' />
+        <div id="service-cont" className='cont'  style={{ backgroundImage: `url(../../Assets/Images/HomePage/2.jpg)`, height: 923}}>
+            <div className='cont-wrap services-items' style={{ position: 'relative', height: 640 }}>
+                
+                <div className='cont-right' style={props.visible ? styles.isContentVisible : styles.isContentNotVisible} >
+                    <div className='bg-transparent'>
+                        <p >იყავით დაცული როგორც თქვენი პერსონალური, ასევე საქმიანი ურთიერთობის პროცესში გამოვლენილი ინფორმაციის გამჟღავნებისგან</p>
+                    </div>
+                    <div className='bg-transparent'  >
+                        <p >ჩვენ ვმუშაობთ კონფიდენციალურობის სრული დაცვით!</p>
+                    </div>
+                    <div className='bg-transparent'  >
+                        <p >ჩვენთან თანამშრომლობა საიმედოა </p>
+                    </div>
                 </div>
-                <div className='cont-right bg-transparent' style={props.visible? styles.isContentVisible : styles.isContentNotVisible} >
-                    <p >იყავით დაცული როგორც თქვენი პერსონალური, ასევე საქმიანი ურთიერთობის პროცესში გამოვლენილი ინფორმაციის გამჟღავნებისგან</p>
-                    <p >ჩვენ ვმუშაობთ კონფიდენციალურობის სრული დაცვით!</p>
-                    <p >ჩვენთან თანამშრომლობა საიმედოა </p>
-                </div>
-            </div>
-
-
         </div>
+
+        </div >
     );
 };
 
