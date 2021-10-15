@@ -13,7 +13,7 @@ const SecondContainer = (props) => {
 
         isContentNotVisible: {
             position: 'relatve',
-            top: 220,
+            top: 190,
             left: 50
         }
     }

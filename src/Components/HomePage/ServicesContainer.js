@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import '../../Containers/ServicesPage/servicesPage.scss';
 import ServiceItem from '../ServicesPage/ServiceItem';
-import { Link ,useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
-const services =[
+const services = [
     {
         title: "ფიზიკური პირის მონაცემების დადგენა",
         description: "დაგეხმარებით იმის დადგენაში, თუ ვინ არის კონკრეტული პიროვნება (თქვენი ინტერესის ობიექტი), რას წარმოადგენს, სად ცხოვრობს, რა არის მისი საკონტაქტო მონაცემები, როგორია მისი ოჯახური მდგომარეობა, რას საქმიანობს, როგორი წარსული აქვს და აშ..",
@@ -17,7 +17,7 @@ const services =[
         imgUrl: "12a",
         id: 3
     },
-    
+
     {
         title: "მიმალვაში მყოფი პირის მოძიება",
         description: "ცხოვრებაში არც თუ ისე იშვიათად ვაწყდებით თაღლით ადამიანებს, რომელთაც ჩვენგან სარგებლის უკანონოდ მიღება და შემდეგ მიმალვა კარგად ეხერხებათ. ჩვენ შეგვიძლია მოვძებნოთ თქვენი ინტერესის ობიექტი და დაგეხმაროთ მასთან კონტაქტის დამყარებაში.",
@@ -30,9 +30,9 @@ const services =[
         imgUrl: "14",
         id: 13
     },
-  
+
     {
-        title: "კრიმინალური თალთვალის გამოვლენა",
+        title: "კრიმინალური თვალთვალის გამოვლენა",
         description: "არის შემთხვევები, როცა საყვარელი ადამიანის (მეუღლე, საქმრო/საცოლე, მეგობარი და აშ) ერთგულებაში ეჭვი ეპარებათ, მაგრამ სიმართლის დადგენა თავად არ შეუძლიათ. არ არის საჭირო ეჭვებით ურთიერთობა, ჩვენ მზად ვართ გავარკვიოთ რამდენად სანდო და ერთგულია ქვენი პარტნიორი.",
         imgUrl: "4",
         id: 4
@@ -68,25 +68,25 @@ const ServicesContainer = (props) => {
         <div id="service-cont" className='cont'>
             <div className='cont-wrap services-items'  >
                 <h1>ჩვენი მომსახურება</h1>
-                <div className = 'circle-wrap'>
-                <div className = 'circle'>
-                    სწრაფი
+                <div className='circle-wrap'>
+                    <div className='circle'>
+                        სწრაფი
+                    </div>
+                    <div className='circle'>
+                        ხარისხიანი
+                    </div>
+                    <div className='circle'>
+                        საიმედო
+                    </div>
                 </div>
-                <div className = 'circle'>
-                    ხარისხიანი
-                </div>
-                <div className = 'circle'>
-                    საიმედო
-                </div>
-                </div>
-                
-                <div className='cont-right services-items' style={props.visible? styles.isContentVisible : styles.isContentNotVisible} >
-                {services?.map((s, i) =>(
-                <ServiceItem  key = {i} services = {s} onClick={() => {history.push('/services')}}/>
-            ))}
+
+                <div className='cont-right services-items' style={props.visible ? styles.isContentVisible : styles.isContentNotVisible} >
+                    {services?.map((s, i) => (
+                        <ServiceItem key={i} services={s} onClick={() => { history.push('/services') }} />
+                    ))}
                 </div>
             </div>
-             <Link to ='services'>ყველა სერვისი</Link>       
+            <Link to='services'>ყველა სერვისი</Link>
 
         </div>
     );

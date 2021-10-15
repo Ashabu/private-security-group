@@ -57,7 +57,7 @@ const FourthContainer = (props) => {
 
     return (
         <div id="container-1" className='cont'>
-            <div className='cont-wrap' style={{ backgroundImage: `url(../../../../Assets/Images/HomePage/versionn_5.jpg)` }}>
+            <div className='cont-wrap' style={{ backgroundImage: `url(../../../../Assets/Images/HomePage/versionon_4.jpg)` }}>
                 <div className='cont-left'>
                     <img src='../../Assets/Images/HomePage/4.png' />
                 </div>

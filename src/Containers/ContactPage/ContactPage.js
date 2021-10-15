@@ -7,7 +7,9 @@ const ContactPage = () => {
     return (
         <Layout>
             <div className='con-wrap'>
+                
                 <div className='con-cont' >
+                <h1>საკონტაქტო ინფორმაცია</h1>
                     <div className='con-cont-right'>
                         <div className='text-con-us' >
                             <p>

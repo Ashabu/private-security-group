@@ -16,7 +16,7 @@ const Header = () => {
                             <Link to='/'>მთავარი</Link>
                         </li>
                         <li>
-                            <Link to='/aboutUs'>ჩვენს შესახებ</Link>
+                            <Link to='/aboutUs'>ჩვენ შესახებ</Link>
                         </li>
                         <li>
                             <Link to='/services' >სერვისები</Link>
@@ -38,7 +38,7 @@ const Header = () => {
                             <Link to='/'>მთავარი</Link>
                         </li>
                         <li>
-                            <Link to='/aboutUs'>ჩვენს შესახებ</Link>
+                            <Link to='/aboutUs'>ჩვენ შესახებ</Link>
                         </li>
                         <li>
                             <Link to='/services' >სერვისები</Link>

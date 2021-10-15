@@ -1,12 +1,43 @@
 
+.jc-start {
+    justify-content: flex-start;
+}
 
-.flex-end {
-    display: flex;
+.jc-end {
     justify-content: flex-end;
 }
 
-.flex-start {
-    display: flex;
-    justify-content: flex-start
-    ;
+.jc-end-al-center {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.jc-end-al-start {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.jc-start-al-center {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.jc-start-al-end {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.jc-start-al-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.jc-center-al-start {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.jc-center-al-end {
+    justify-content: center;
+    align-items: flex-end;
 }

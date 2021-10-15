@@ -10,13 +10,13 @@ const AboutUsPage = () => {
                 <div className='au-cont' >
 
                     <div className='au-cont-right'>
-                        <div className='text-ab-us'>
+                        <div className='text-ab-us animation1'>
                             <p>P&amp;S Group დაკომპლექტებულია ოპერატიული და საგამოძიებო საქმიანობის სფეროში მრავალწლიანი გამოცდილების მქონე კადრებით.</p>
                         </div>
-                        <div className='text-ab-us'>
+                        <div className='text-ab-us animation2'>
                             <p>ჩვენი გუნდი მზად არის იმუშაოს 24/7, რათა თქვენთვის სასურველი მომსახურება მიიღოთ სწრაფად და ხარისხიანად.</p>
                         </div>
-                        <div className='text-ab-us'>
+                        <div className='text-ab-us animation3'>
                             <p>ჩვენ ვმოქმედებთ კანონმდებლობის შესაბამისად და კონფიდენციალურობის სრული დაცვით.</p>
                         </div>
                     </div>

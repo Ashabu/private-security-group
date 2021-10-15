@@ -55,10 +55,10 @@ const ThirdContainer = (props) => {
             <div className='cont-wrap'>
                 <div className='cont-right' style={{ alignItems: 'center' }}>
                     <div className='text' style={isVisible? styles.isContentVisible : styles.isContentNotVisible}>
-                        <p>P &amp; S Group შედგება სამართალდაცვითი და ოპერატიული საქმიანობის სფეროში გამოცდილი კადრებისგან, რომელთაც გააჩნიათ ინფორმაციის სწრაფად, ხარისხიანად და კონფიდენციალურად მოპოვებისათვის საჭირო ცოდნა და უნარ-ჩვევები</p>
+                        <p style={ {color: '#000'}}>P &amp; S Group შედგება სამართალდაცვითი და ოპერატიული საქმიანობის სფეროში გამოცდილი კადრებისგან, რომელთაც გააჩნიათ ინფორმაციის სწრაფად, ხარისხიანად და კონფიდენციალურად მოპოვებისათვის საჭირო ცოდნა და უნარ-ჩვევები</p>
                     </div>
                     <div className='text' style={isVisible? styles.isContentVisible : styles.isContentNotVisible}>
-                        <p>საჭიროების შემთხვევაში ჩვენი გუნდი მზად არის მომსახურების   უზრუნველყოფისთვის აუცილებელი სამუშაოები აწარმოოს ქვეყნის გარგლებს გარეთ</p>
+                        <p style={ {color: '#000'}}>საჭიროების შემთხვევაში ჩვენი გუნდი მზად არის მომსახურების   უზრუნველყოფისთვის აუცილებელი სამუშაოები აწარმოოს ქვეყნის ფარგლებს გარეთ</p>
                     </div>
                 </div>
                 <div className='cont-left'>
