@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './homePage.scss';
 import Layout from './../../Components/Layout/Layout';
 import Firstcontainer from './../../Components/HomePage/FirstContainer';
@@ -6,6 +6,7 @@ import SecondContainer from '../../Components/HomePage/SecondContainer';
 import ThirdContainer from '../../Components/HomePage/ThirdComponent';
 import FourthContainer from '../../Components/HomePage/FourthContainer';
 import ServicesContainer from '../../Components/HomePage/ServicesContainer';
+import { AppContext } from '../../Context/AppContext';
 
 const HomePage = () => {
 
@@ -44,6 +45,7 @@ const HomePage = () => {
         return false;
     }
 
+    
 
 
 

@@ -62,10 +62,10 @@ const FourthContainer = (props) => {
                     <img src='../../Assets/Images/HomePage/4.png' />
                 </div>
                 <div className='cont-right' style={{ alignItems: 'center' }}>
-                    <div className='text' style={isVisible? styles.isContentVisible : styles.isContentNotVisible}>
+                    <div className={isVisible? 'text is-1-visible': 'text is-2-notVisible'} >
                         <p>გაქვთ კითხვები სამართლებრივ სფეროში ან გჭირდებათ იურისტის დახმარება? </p>
                     </div>
-                    <div className='text' style={isVisible? styles.isContentVisible1 : styles.isContentNotVisible}>
+                    <div className={isVisible? 'text is-2-visible': 'text is-2-notVisible'} >
                         <p> -ჩვენ გთავაზობთ იურიდიულ მომსახურებას სამართლის სხვადასხვა სფეროში.</p>
                     </div>
 

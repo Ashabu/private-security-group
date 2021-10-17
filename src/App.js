@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './App.scss';
+import axios from 'axios';
+import { AppContext } from './Context/AppContext';
 import Routing from './Routing/Routing';
 
+
 function App() {
+  const { activeLang, setAppLangs } = useContext(AppContext);
+
+
+  useEffect(() => {
+    setAppLang();
+  }, [activeLang])
+
+  const setAppLang = () => {
+    axios.get(`http://localhost:9000/Assets/Language/${activeLang}.json`)
+      .then(res => {
+        setAppLangs(res.data.Lang[0]);
+        console.log(res.data)
+      }).catch(e => {
+        console.log(e)
+      });
+  };
+
   return (
     <div className="App">
       <Routing />

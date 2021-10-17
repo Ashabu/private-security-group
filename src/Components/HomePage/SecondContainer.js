@@ -21,10 +21,10 @@ const SecondContainer = (props) => {
 
 
     return (
-        <div id="service-cont" className='cont'  style={{ backgroundImage: `url(../../Assets/Images/HomePage/2.jpg)`, height: 923}}>
+        <div id="service-cont" className='cont cont-2'  >
             <div className='cont-wrap services-items' style={{ position: 'relative', height: 640 }}>
                 
-                <div className='cont-right' style={props.visible ? styles.isContentVisible : styles.isContentNotVisible} >
+                <div className={props.visible? 'cont-right is-1-visible' : 'cont-right is-1-notVisible'}  >
                     <div className='bg-transparent'>
                         <p >იყავით დაცული როგორც თქვენი პერსონალური, ასევე საქმიანი ურთიერთობის პროცესში გამოვლენილი ინფორმაციის გამჟღავნებისგან</p>
                     </div>

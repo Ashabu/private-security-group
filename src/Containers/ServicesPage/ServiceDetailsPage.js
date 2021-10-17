@@ -5,7 +5,7 @@ import Layout from '../../Components/Layout/Layout';
 
 const ServiceDetailsPage = (props) => {
 
-    const { title, description, imgUrl ,id  } = props.services;
+    const { subtitle, description, imgUrl ,id  } = props.services;
 
     const handleDetailClass = (id) => {
         let mainCls = 'se-cont-details '
@@ -28,7 +28,7 @@ const ServiceDetailsPage = (props) => {
         } else if (id === 9 ) {
             return mainCls + 'jc-center-al-start'
         } else if (id === 10 ) {
-            return mainCls + 'jc-start-al-start'
+            return mainCls + 'jc-start-al-center'
         } else if (id === 11 ) {
             return mainCls + 'jc-center-al-end'
         } else if (id === 12 ) {
@@ -50,6 +50,7 @@ const ServiceDetailsPage = (props) => {
                 <div className={handleDetailClass(id)}>
                     <div className={`se-det-text-${id}`} >
                         <p>{description}</p>
+                        {subtitle? <p>{subtitle}</p> : null}
                     </div>
                 </div>
             </div>

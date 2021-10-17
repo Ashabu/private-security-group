@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AppContext } from '../../Context/AppContext';
 
 const Header = () => {
 
     const [openMenu, setOpenMenu ] = useState(false);
+    const {setLang} = useContext(AppContext)
+
     return (
         <div className='app-header'>
             <div className = {openMenu? 'menu-btn open' : 'menu-btn'} onClick={()=> setOpenMenu(!openMenu)}>
@@ -50,15 +53,15 @@ const Header = () => {
                 </div>
                 <div className='app-lang'>
                     <ul>
-                        <li>
+                        <li onClick = {() => setLang('ka')}>
                             <img style={{ width: 20, height: 15 }} src='../../Assets/Images/Flags/flag-ge.svg' />
                             <span>ქარ</span>
                         </li>
-                        <li>
+                        <li onClick = {() => setLang('en')}>
                             <img style={{ width: 20, height: 15 }} src='../../Assets/Images/Flags/flag-us.svg' />
                             <span>ENG</span>
                         </li>
-                        <li>
+                        <li onClick = {() => setLang('ru')}>
                             <img style={{ width: 20, height: 15 }} src='../../Assets/Images/Flags/flag-ru.svg' />
                             <span>RU</span>
                         </li>
