@@ -16,12 +16,13 @@ function App() {
   const setAppLang = () => {
     axios.get(`http://localhost:9000/Assets/Language/${activeLang}.json`)
       .then(res => {
-        setAppLangs(res.data.Lang[0]);
-        console.log(res.data)
+        setAppLangs({...res.data.Lang[0]});
       }).catch(e => {
         console.log(e)
       });
   };
+
+  console.log('activeLang')
 
   return (
     <div className="App">

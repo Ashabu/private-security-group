@@ -20,8 +20,9 @@ const AppProvider = ({ children }) => {
     };
     const setAppLangs = (data) => {
         setLangs({...data});
+        
     }
-    console.log(activeLang)
+    console.log("Context ==>", Langs)
 
     return (
         <AppContext.Provider value={{ activeLang, setLang, Langs, setAppLangs }}>

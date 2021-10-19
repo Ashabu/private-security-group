@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './aboutUsPage.scss';
 import Layout from './../../Components/Layout/Layout';
+import { AppContext } from '../../Context/AppContext';
 
 
 
 const AboutUsPage = () => {
+    const {Langs} = useContext(AppContext)
     return (
         <Layout>
                 <div className='au-cont' >
 
                     <div className='au-cont-right'>
                         <div className='text-ab-us animation1'>
-                            <p>P&amp;S Group დაკომპლექტებულია ოპერატიული და საგამოძიებო საქმიანობის სფეროში მრავალწლიანი გამოცდილების მქონე კადრებით.</p>
+                            <p>{Langs.aboutUsText1}</p>
                         </div>
                         <div className='text-ab-us animation2'>
-                            <p>ჩვენი გუნდი მზად არის იმუშაოს 24/7, რათა თქვენთვის სასურველი მომსახურება მიიღოთ სწრაფად და ხარისხიანად.</p>
+                            <p>{Langs.aboutUsText2}</p>
                         </div>
                         <div className='text-ab-us animation3'>
-                            <p>ჩვენ ვმოქმედებთ კანონმდებლობის შესაბამისად და კონფიდენციალურობის სრული დაცვით.</p>
+                            <p>{Langs.aboutUsText3}</p>
                         </div>
                     </div>
                     

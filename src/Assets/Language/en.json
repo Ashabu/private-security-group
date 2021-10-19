@@ -1,7 +1,40 @@
 {
-    "Lang": 
+    "Lang": [
         {
-            "text1": "Private Detective Service"
+            "home" :"Home",
+            "aboutus" :"About Us",
+            "services" : "Services",
+            "contact": "Contact Us",
+            "headerText": "Private Detective Service",
+            "firstContText1": "Do you want to obtain information on particular persons or investigate facts/circumstances, but do not have enough time and means for this purpose?",
+            "firstContText2": "Our team is ready to work 24/7 in order to obtain the service you want quickly and efficiently.",
+            "firstContText3": "Contact us for more information: (WhatsApp, Telegram, Signal) 599 06 27 50 (for females) or 599 06 67 50 (for males)",
+            "secondContTitle": "Our Services",
+            "secondContText1": "Quick",
+            "secondContText2" : "Efficient",
+            "secondContText3" : "Safe",
+            "allServices" : "All Services",
+            "thirdContText1": "Protect yourself from the disclosure of personal and business information as well",
+            "thirdContText2" : "We work with full privacy protection!",
+            "thirdContText3" : "Cooperation with us is reliable",
+            "FourthContText1": "The P&S Group is staffed with experienced law enforcement and operational personnel with the knowledge and skills necessary to obtain information quickly, efficiently and confidentially.",
+            "FourthContText2" : "If needed, our team is ready to carry out the necessary work to provide services outside the country",
+            "FifthContText1": "Do you have questions in the legal field or are you in need of the assistance of a lawyer?",
+            "FifthContText2" : "- We offer legal services in various fields of law.",
+            "footerText":"Be informed! Be protected!",
+            "aboutUsText1":"P&S Group is staffed with personnel with many years of experience in the field of operational and investigative activities.",
+            "aboutUsText2":"Our team is ready to work 24/7 to get the service you want quickly and efficiently.",
+            "aboutUsText3":"We act in accordance with the law and in full compliance with confidentiality.",
+            "contactHeader" : "Contact information",
+            "contactTextFemale" : "for females",
+            "contactTextmale" :"for males",
+            "contactText1" : "Contact us ",
+            "contacttext2": "Write to us on the following ",
+            "cotactTextMail": "E-mail"
+            
+
         }
     
+    ]
+        
 }

@@ -1,25 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "../../Context/AppContext";
 
 
 
 const FourthContainer = (props) => {
 
-    const styles = {
-        isContentVisible: {
-            position: 'relative',
-            left: 0
-        },
-
-        isContentVisible1: {
-            position: 'relative',
-            left: 100
-        },
-
-        isContentNotVisible: {
-            position: 'relative',
-            left: 900
-        }
-    }
+  const {Langs} = useContext(AppContext);
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -63,19 +49,16 @@ const FourthContainer = (props) => {
                 </div>
                 <div className='cont-right' style={{ alignItems: 'center' }}>
                     <div className={isVisible? 'text is-1-visible': 'text is-2-notVisible'} >
-                        <p>გაქვთ კითხვები სამართლებრივ სფეროში ან გჭირდებათ იურისტის დახმარება? </p>
+                        <p>{Langs.FifthContText1} </p>
                     </div>
                     <div className={isVisible? 'text is-2-visible': 'text is-2-notVisible'} >
-                        <p> -ჩვენ გთავაზობთ იურიდიულ მომსახურებას სამართლის სხვადასხვა სფეროში.</p>
+                        <p> {Langs.FifthContText2}</p>
                     </div>
-
                 </div>
             </div>
             <div className='text' style={{ maxWidth: '100%', margin: 0}}>
-                <h3 style={{paddingTop: 10, paddingBottom: 10 }}>  იყავი ინფორმირებული! იყავი დაცული! </h3>
+                <h3 style={{paddingTop: 10, paddingBottom: 10 }}> {Langs.footerText} </h3>
             </div>
-
-
         </div>
     );
 };

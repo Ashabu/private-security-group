@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import AnimatedSearch from "../AnimatedSearch/AnimatedSearch";
 import WrapperWithListener from "../../HOC/WrapperWithListener";
 import { Link } from "react-router-dom";
+import {AppContext} from'../../Context/AppContext';
 
 
 
@@ -17,6 +18,10 @@ const FirstContainer = (props) => {
         };
         setTindex(i);
     }
+
+    const {Langs} = useContext(AppContext);
+
+    
 
     // useEffect(() => {
     //     window.addEventListener('scroll', handleScrollListener);
@@ -59,7 +64,7 @@ const FirstContainer = (props) => {
             <div className='cont-body'>
                 <div className='cont-top'>
                     <div className='subcont-title'>
-                        <h1>კერძო დეტექტივის მომსახურება</h1>
+                        <h1>{Langs.headerText}</h1>
                     </div>
                     <div className='search-cont'>
                         <AnimatedSearch index={tIndex} onSetIndex={handleChangeTindex} />
@@ -70,21 +75,21 @@ const FirstContainer = (props) => {
                 <div className='cont-mid'>
                     <div className = 'with-bg animation1'>
                         <p>
-                            გსურთ მიიღოთ კონკრეტული პირების შესახებ ინფორმაცია ან გამოიკვლიოთ ფაქტები/გარემოებები, მაგრამ არ გაქვთ ამისათვის საჭირო დრო და საშუალება?
+                            {Langs.firstContText1}
                         </p>
                     </div>
                    
                 </div>
                 <div className = 'with-bg animation2'>
                         <p>
-                        -ჩვენი გუნდი მზად არის იმუშაოს 24/7, რათა თქვენთვის სასურველი მომსახურება მიიღოთ ოპერატიულად და ხარისხიანად
+                        {Langs.firstContText2}
                         </p>
                     </div>
                 <div className='cont-bot '>
                     <div className='with-bg animation3' >
                         <Link to = '/contact'>
                         <p >
-                            დეტალური ინფორმაციისთვის დაგვიკავშირდით: (WhatsApp, Telegram, Signal) 599 06 27 50 (ქალბატონებისთვის) ან 599 06 67 50 (მამაკაცებისთვის)
+                            {Langs.firstContText3}
                         </p>
                         </Link>
                     </div>

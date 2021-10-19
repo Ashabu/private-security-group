@@ -1,8 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "../../Context/AppContext";
 
 
 
 const ThirdContainer = (props) => {
+
+    const {Langs} = useContext(AppContext)
+
 
     const styles = {
         isContentVisible: {
@@ -55,10 +59,10 @@ const ThirdContainer = (props) => {
             <div className='cont-wrap'>
                 <div className='cont-right' style={{ alignItems: 'center' }}>
                     <div className='text' style={isVisible? styles.isContentVisible : styles.isContentNotVisible}>
-                        <p style={ {color: '#000'}}>P &amp; S Group შედგება სამართალდაცვითი და ოპერატიული საქმიანობის სფეროში გამოცდილი კადრებისგან, რომელთაც გააჩნიათ ინფორმაციის სწრაფად, ხარისხიანად და კონფიდენციალურად მოპოვებისათვის საჭირო ცოდნა და უნარ-ჩვევები</p>
+                        <p style={ {color: '#000'}}>{Langs.FourthContText1}</p>
                     </div>
                     <div className='text' style={isVisible? styles.isContentVisible : styles.isContentNotVisible}>
-                        <p style={ {color: '#000'}}>საჭიროების შემთხვევაში ჩვენი გუნდი მზად არის მომსახურების   უზრუნველყოფისთვის აუცილებელი სამუშაოები აწარმოოს ქვეყნის ფარგლებს გარეთ</p>
+                        <p style={ {color: '#000'}}>{Langs.FourthContText2}</p>
                     </div>
                 </div>
                 <div className='cont-left'>

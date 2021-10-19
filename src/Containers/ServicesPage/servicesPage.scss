@@ -1,6 +1,6 @@
 .se-main{
     width: 100%;
-    height: calc(100vh - 178px);
+    height: auto;
     background-image: url('../../Assets/Images/services/services-8.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,6 @@
         height: 100%;
         margin: 0 auto;
         padding: 20px;
-        justify-content: space-between;
         align-items: center;
     }
 }
@@ -23,11 +22,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin: 10px;
     color: #ffffff;
     border: 2px solid #09439b73;
     border-radius: 5px;
-    font-family: "LeStudio-Bold";
+    font-family: "LeStudio-Medium";
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     transition: all 0.5s;
@@ -255,6 +254,37 @@
     }
 }
 
+.se-det-text-13 {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cfcfcf;
+    background-color: #ffffffa3;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    p {
+        font-size: 20px; 
+        color: #000;
+        line-height: 1.6;
+        max-width: 76ch;
+        text-align: center;
+    }
+}
+
+.se-det-text-14 {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cfcfcf;
+    background-color: #ffffffa3;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    p {
+        font-size: 20px; 
+        color: #000;
+        line-height: 1.6;
+        max-width: 76ch;
+        text-align: center;
+    }
+}
 
 
 

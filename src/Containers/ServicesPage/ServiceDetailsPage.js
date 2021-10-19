@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './servicesPage.scss';
 import Layout from '../../Components/Layout/Layout';
+import { AppContext } from '../../Context/AppContext';
 
 const ServiceDetailsPage = (props) => {
 
     const { subtitle, description, imgUrl ,id  } = props.services;
+    const {activeLang} = useContext(AppContext)
 
     const handleDetailClass = (id) => {
         let mainCls = 'se-cont-details '
@@ -33,6 +35,10 @@ const ServiceDetailsPage = (props) => {
             return mainCls + 'jc-center-al-end'
         } else if (id === 12 ) {
             return mainCls + 'jc-end-al-start'
+        } else if (id === 12 )  {
+            return mainCls + 'jc-center-al-start'
+        }else if (id === 14 ) {
+            return mainCls + 'jc-center-al-start'
         } else {
             return mainCls
         }
@@ -49,8 +55,8 @@ const ServiceDetailsPage = (props) => {
             <div className='se-cont-det' style={{ backgroundImage: `url(../../Assets/Images/services/${imgUrl.trim()}.jpg)` }}>
                 <div className={handleDetailClass(id)}>
                     <div className={`se-det-text-${id}`} >
-                        <p>{description}</p>
-                        {subtitle? <p>{subtitle}</p> : null}
+                        <p>{description[0][activeLang]}</p>
+                        {subtitle? <p>{subtitle[0][activeLang]}</p> : null}
                     </div>
                 </div>
             </div>

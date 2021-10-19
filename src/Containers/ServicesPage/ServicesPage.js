@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Layout from '../../Components/Layout/Layout';
 import './servicesPage.scss';
 import axios from 'axios'
@@ -7,6 +7,7 @@ import ServiceDetailsPage from './ServiceDetailsPage';
 import  { route, useHistory } from 'react-router';
 import { Route } from 'react-router';
 import { useLocation } from "react-router-dom";
+import { AppContext } from '../../Context/AppContext';
 
 const ServicesPage = (props) => {
     const history = useHistory();

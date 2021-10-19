@@ -1,24 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext} from "react";
+import { AppContext } from "../../Context/AppContext";
 
 
 
 const SecondContainer = (props) => {
 
-    const styles = {
-        isContentVisible: {
-            position: 'relative',
-            top: -550,
-            left: 50
-        },
+    const {Langs} = useContext(AppContext);
 
-        isContentNotVisible: {
-            position: 'relatve',
-            top: 190,
-            left: 50
-        }
-    }
-
-
+    console.log(Langs.thirdContText3)
 
     return (
         <div id="service-cont" className='cont cont-2'  >
@@ -26,13 +15,13 @@ const SecondContainer = (props) => {
                 
                 <div className={props.visible? 'cont-right is-1-visible' : 'cont-right is-1-notVisible'}  >
                     <div className='bg-transparent'>
-                        <p >იყავით დაცული როგორც თქვენი პერსონალური, ასევე საქმიანი ურთიერთობის პროცესში გამოვლენილი ინფორმაციის გამჟღავნებისგან</p>
+                        <p >{Langs.thirdContText1}</p>
                     </div>
                     <div className='bg-transparent'  >
-                        <p >ჩვენ ვმუშაობთ კონფიდენციალურობის სრული დაცვით!</p>
+                        <p >{Langs.thirdContText2}</p>
                     </div>
                     <div className='bg-transparent'  >
-                        <p >ჩვენთან თანამშრომლობა საიმედოა </p>
+                        <p >{Langs.thirdContText3}</p>
                     </div>
                 </div>
         </div>

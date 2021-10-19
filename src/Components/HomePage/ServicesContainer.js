@@ -1,45 +1,70 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import '../../Containers/ServicesPage/servicesPage.scss';
 import ServiceItem from '../ServicesPage/ServiceItem';
 import { Link, useHistory } from 'react-router-dom';
+import { AppContext } from '../../Context/AppContext';
 
 
 const services = [
     {
-        title: "ფიზიკური პირის მონაცემების დადგენა",
-        description: "დაგეხმარებით იმის დადგენაში, თუ ვინ არის კონკრეტული პიროვნება (თქვენი ინტერესის ობიექტი), რას წარმოადგენს, სად ცხოვრობს, რა არის მისი საკონტაქტო მონაცემები, როგორია მისი ოჯახური მდგომარეობა, რას საქმიანობს, როგორი წარსული აქვს და აშ..",
+        title:
+            [{
+                ka: "კერძო პირის გამოძიება",
+                en: "Identification of data of a natural person ",
+                ru: "Идентификация данных физического лица"
+            }],
         imgUrl: "11a",
         id: 2
     },
     {
-        title: "მოზარდების მეთვალყურეობა",
-        description: "დღევანდელ რეალობაში განსაკუთრებით რთულია მოზარდების კონტროლი. ოჯახის მიღმა ისინი ხშირად ექცევიან საშიში გარემოს ზემოქმედების ქვეშ. ჩვენ მზად ვართ შევისწავლოთ და მოგაწოდოთ სრული ინფორმაცია თქვენი მოზარდის ყოველდღიური ცხოვრების, საქმიანობის და საკონტაქტო პირების შესახებ, მოვახდინოთ მისი ქცევის ანალიზი და დაგეხმაროთ პრევენციული ზომების დროულად მიღებაში.",
+        title:
+            [{
+                ka: "მოზარდების მეთვალყურეობა",
+                en: "Adult supervision ",
+                ru: "Надзор за подростками"
+            }],
         imgUrl: "12a",
         id: 3
     },
 
     {
-        title: "მიმალვაში მყოფი პირის მოძიება",
-        description: "ცხოვრებაში არც თუ ისე იშვიათად ვაწყდებით თაღლით ადამიანებს, რომელთაც ჩვენგან სარგებლის უკანონოდ მიღება და შემდეგ მიმალვა კარგად ეხერხებათ. ჩვენ შეგვიძლია მოვძებნოთ თქვენი ინტერესის ობიექტი და დაგეხმაროთ მასთან კონტაქტის დამყარებაში.",
+        title:
+            [{
+                ka: "მიმალვაში მყოფი პირის მოძიება",
+                en: "Searching for fugitive criminals",
+                ru: "Обнаружение находящегося в розыске лица"
+            }],
         imgUrl: "13a",
         id: 5
     },
     {
-        title: "ბიზნეს პარტნიორის საიმედოობის დადგენა",
-        description: "გაქვთ კითხვები მოქმედი ბიზნესპარტნიორის შესახებ? ან გსურთ ბიზნეს ურთიერთობა დაამყაროთ პირთან, რომლის საიმედოობაშიც ეჭვი გეპარებათ? ჩვენი გუნდი მზად არის გამოიკვლიოს თქვენი ინტერესის ობიექტის პიროვნული, კარიერული თუ სხვა სახის ინფორმაცია, რაც დაგეხმარებათ რისკების სწორად შეფასებასა და სწორი გადაწყვეტილების მიღებაში.",
+        title:
+            [{
+                ka: "ბიზნეს პარტნიორის საიმედოობის დადგენა",
+                en: "Determination of reliability of business partner",
+                ru: "Определение надежности бизнес партнера."
+            }],
         imgUrl: "14",
         id: 13
     },
 
     {
-        title: "კრიმინალური თვალთვალის გამოვლენა",
-        description: "არის შემთხვევები, როცა საყვარელი ადამიანის (მეუღლე, საქმრო/საცოლე, მეგობარი და აშ) ერთგულებაში ეჭვი ეპარებათ, მაგრამ სიმართლის დადგენა თავად არ შეუძლიათ. არ არის საჭირო ეჭვებით ურთიერთობა, ჩვენ მზად ვართ გავარკვიოთ რამდენად სანდო და ერთგულია ქვენი პარტნიორი.",
-        imgUrl: "4",
+        title:
+            [{
+                ka: "კრიმინალური თვალთვალის გამოვლენა",
+                en: "Detection of criminal surveillance",
+                ru: "Обнаружение криминального наблюдения"
+            }],
+        imgUrl: "15",
         id: 4
     },
     {
-        title: "იურიდიული მომსახურება",
-        description: "გაქვთ კითხვები სამართლებრივ სფეროში? ან გჭირდებათ იურისტის დახმარება? ჩვენ გთავაზობთ იურიდიულ მომსახურეობას სამართლის სხვადასხვა სფეროში.",
+        title:
+            [{
+                ka: "იურიდიული მომსახურება",
+                en: "Legal services  ",
+                ru: "Юридические услуги"
+            }],
         imgUrl: "16",
         id: 9
     }
@@ -47,6 +72,8 @@ const services = [
 
 
 const ServicesContainer = (props) => {
+
+    const { Langs } = useContext(AppContext)
     const history = useHistory();
     const styles = {
         isContentVisible: {
@@ -67,16 +94,16 @@ const ServicesContainer = (props) => {
     return (
         <div id="service-cont" className='cont'>
             <div className='cont-wrap services-items'  >
-                <h1>ჩვენი მომსახურება</h1>
+                <h1>{Langs.secondContTitle}</h1>
                 <div className='circle-wrap'>
                     <div className='circle'>
-                        სწრაფი
+                        {Langs.secondContText1}
                     </div>
                     <div className='circle'>
-                        ხარისხიანი
+                        {Langs.secondContText2}
                     </div>
                     <div className='circle'>
-                        საიმედო
+                        {Langs.secondContText3}
                     </div>
                 </div>
 
@@ -86,7 +113,7 @@ const ServicesContainer = (props) => {
                     ))}
                 </div>
             </div>
-            <Link to='services'>ყველა სერვისი</Link>
+            <Link to='services'>{Langs.allServices}</Link>
 
         </div>
     );
