@@ -20,7 +20,7 @@ const ServicesPage = (props) => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:9000/Assets/data.json').then(res => {
+        axios.get(`${globalConfig.api_URL}/Assets/data.json`).then(res => {
             setServices(res.data.services)
         })
         

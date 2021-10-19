@@ -9,9 +9,9 @@ const ContactPage = () => {
     return (
         <Layout>
             <div className='con-wrap'>
-                
+            <h1 style={{position:'absolute', left: 40}}>{Langs.contactHeader}</h1>
                 <div className='con-cont' >
-                <h1>{Langs.contactHeader}</h1>
+                
                     <div className='con-cont-right'>
                         <div className='text-con-us' >
                             <p>

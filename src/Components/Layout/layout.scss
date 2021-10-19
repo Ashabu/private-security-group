@@ -239,3 +239,11 @@
     }
     
 }
+
+@media(max-width: 419px) {
+    .app-header {
+        .app-header-left {
+            justify-content: flex-end;
+        }
+    }
+}

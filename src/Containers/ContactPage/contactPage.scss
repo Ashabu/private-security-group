@@ -1,5 +1,4 @@
 .con-wrap {
-    background-color: #000;
 
     h1 {
         padding-left: 30px;
@@ -14,12 +13,13 @@
         background-position: center;
         background-repeat: no-repeat;
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
+        justify-content: flex-end;
         
     
         .con-cont-right {
             padding-top: 190px;
-            width: 65%;
+            width: 74ch;
             display: flex;
             flex-direction: column;
             
@@ -31,8 +31,7 @@
                 padding: 20px;
                 border-radius: 10px;
                 margin: 20px 10px;
-                width: 100%;
-                max-width: 60%;
+               
                 box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
                 background-color: #ffffff5c;
     
@@ -48,4 +47,37 @@
 }
 
 
+
+@media(max-width: 1000px) {
+    .con-wrap {
+        h1 {
+            font-size: 20px;
+        }
+        .con-cont {
+            padding: 0 20px;
+            height: calc(100vh - 177px);
+            background-size: 100% 100%;
+            margin-top: 80px;
+
+        .con-cont-right {
+            width: unset;
+            .text-ab-us {
+                
+                p {
+                    font-size: 16px; 
+                    
+                }
+            }
+            .text-con-us {
+                width: 100%;
+                max-width: unset;
+                p {
+                    font-size: 16px; 
+                    
+                }
+            }
+        }
+    }
+    }
+}
 
