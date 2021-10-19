@@ -1,7 +1,7 @@
 .cont-1-wrap {
     width: 100%;
     background-image: url('../../Assets/Images/HomePage/slide-image-2.jpg');
-    height: 930px;
+    height: 860px;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -48,7 +48,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 0px 20px;
-        overflow: hidden;
+        overflow-x: hidden;
 
         .search-cont {
             margin:0 auto;
@@ -137,6 +137,7 @@
     .cont-wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         margin: 0 auto;
         height: auto;
@@ -149,6 +150,16 @@
             position: relative; 
             flex-direction: column;
             align-items: center;
+
+            .isContentVisible {
+                position: relative;
+                top: 0;
+            }
+    
+            .isContentNotVisible {
+                position: relative;
+                top: 500px;
+            }
         }
     
         .cont-left {
@@ -209,12 +220,12 @@
             }
            
             p {
-                max-width: 52ch;
+                max-width: 53ch;
                 color: #ffffff;
                 font-size: 18px;
                 font-weight: 700;
                 font-style: normal;
-                text-align: justify;
+                text-align: center;
                 line-height: 1.2;
             }
         }
@@ -291,7 +302,47 @@
 }
 
 @media (max-width: 1440px) {
+    .cont-1-wrap {
+        height: 815px;
 
+        .with-bg {
+
+            &:first-child {
+                top: -18px;
+            }
+        }
+    }
+
+    .cont {
+        &.cont-2 {
+            height: unset;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .cont-wrap {
+            .cont-right {
+                p {
+                    font-size: 15px;
+                }
+
+                &.is-1-notVisible {
+                    top: 90px;
+                    left: 30px;
+                }
+
+                .bg-transparent {
+                    max-width: 55ch;
+                }
+            }
+        }
+    }
+
+    .text {
+        &.is-2-visible {
+            left: 60px;
+        }
+    }
 }
 
 @media (max-width: 1366px) {
@@ -319,7 +370,7 @@
 
                     p {
                         font-size: 16px;
-                        text-align: start;
+                        text-align: center;
                         
                     }    
                 }
@@ -366,6 +417,47 @@
 }
 
 @media (max-width: 1024px) {
+    .cont-1-wrap {
+        background-size: 100% 100%;
+        height: unset;
+
+        .with-bg {
+            max-width: 36ch;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .cont {
+
+        .cont-wrap {
+
+            .cont-right { 
+
+                .text {
+
+                    &.is-1-visible {
+                        left: 0px;
+                    }
+
+                    &.is-2-visible {
+                        left: 0px;
+                    }
+
+                    &.is-2-notVisible {
+                        left: 800px;
+                    }
+                }
+                
+
+                .bg-transparent {
+                    max-width: 42ch;
+                }
+            }
+        }
+    } 
+
 
 }
 
@@ -378,6 +470,13 @@
         margin-top: 80px;
 
         .cont-body {
+            .subcont-title {
+                text-align: center;
+                h1 {
+                    font-size: 22px;
+                }
+                
+            }
 
             .with-bg {
 
@@ -387,7 +486,12 @@
 
                 &:first-child {
                     top: 0;
+                    max-width: unset;
                 }
+            }
+
+            .cont-bot{
+                padding-left: unset;
             }
         }
     }
@@ -408,6 +512,16 @@
 
             &.services-items {
                 height: unset;
+
+               .isContentVisible {
+                   position: relative;
+                   top: 0;
+               }
+            
+               .isContentNotVisible {
+                   position: relative;
+                   top: 120px;
+               }
             }
 
             &.cont-3 {

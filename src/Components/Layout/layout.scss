@@ -45,6 +45,7 @@
                     a {
                         text-decoration: none;
                         color: #FFFFFF;
+                        white-space: nowrap;
                         &:hover {
                             color: #fec67f;
                         }
@@ -184,6 +185,7 @@
             font-size: 30px;
             color: #FFFFFF;
             display: block;
+            
         }
     }
 }
@@ -204,6 +206,19 @@
         .app-header-left {
             justify-content: center;
         }
+    }
+    
+}
+
+@media (max-width: 800px) {
+    
+    .app-footer {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        line-height: 20px;
+        height: auto;
     }
     
 }

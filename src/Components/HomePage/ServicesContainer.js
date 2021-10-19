@@ -107,7 +107,7 @@ const ServicesContainer = (props) => {
                     </div>
                 </div>
 
-                <div className='cont-right services-items' style={props.visible ? styles.isContentVisible : styles.isContentNotVisible} >
+                <div className={props.visible? 'cont-right services-items isContentVisible' : 'cont-right services-items isContentNotVisible'}  >
                     {services?.map((s, i) => (
                         <ServiceItem key={i} services={s} onClick={() => { history.push('/services') }} />
                     ))}
