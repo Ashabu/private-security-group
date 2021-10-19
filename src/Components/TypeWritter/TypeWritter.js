@@ -1,10 +1,12 @@
 import React, { useEffect, useState, createRef, useRef } from 'react';
 import './typeWritter.scss';
 import SymbolComponent from './SymbolComponent';
+import useWindowDimensions from '../../Hooks/WindowDimension';
 
 
 const TypeWritter = (props) => {
     //let _string = "სად იმყოფება ჩემი ინტერესის ობიექტი? რა არის მისი საკონტაქტო, საპასპორტო და სხვა მონაცემები?";
+    const {width, height} = useWindowDimensions();
 
     let textString = props.text;
 
@@ -37,11 +39,20 @@ const TypeWritter = (props) => {
     }, [textString]);
 
     useEffect(() => {
-        if(divResize.current.offsetWidth > 603) {
-            setIsFullWidht(true);
-        } else {
-            setIsFullWidht(false)
+        if(width > 800) {
+            if(divResize.current.offsetWidth > 603) {
+                setIsFullWidht(true);
+            } else {
+                setIsFullWidht(false)
+            }
+        } else if (width < 800 ) {
+            if(divResize.current.offsetWidth > 320) {
+                setIsFullWidht(true);
+            } else {
+                setIsFullWidht(false)
+            }
         }
+       
         
     }, [stringArray])
 

@@ -9,7 +9,12 @@
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
-
+    .div-inp-wrap {
+      
+            width: 603px;
+            position: relative;
+            top: 10px;
+    }
     .loupe {
         background-color: #9e9e9e38;
         display: flex;
@@ -22,5 +27,37 @@
             width: 80px;
             height: 80px
         };
+    }
+}
+
+
+@media(max-width: 800px) {
+    .div-inp {
+        max-width: 100%;
+        height: 50px;
+        border: 4px solid #ffffff61;
+
+        .div-inp-wrap {
+                width: 335px;
+                position: relative;
+                top: 0;
+                .type-writter {
+                    padding: 4px 10px;
+                    .symbol {
+                        font-size: 13px;
+                    }
+                }
+        }
+
+        .loupe {
+           
+            padding: 10px;
+            border-left: 2px solid #ffffff61;
+            
+            img {
+                width: 30px;
+                height: 30px
+            };
+        }
     }
 }

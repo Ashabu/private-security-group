@@ -29,15 +29,12 @@ const ServicesPage = (props) => {
     
 
 
-    console.log(history.location)
  const getId = () => {
     const search = useLocation().search;
-    console.log(search)
     const id=new URLSearchParams(document.location.href).get("id");
     return id;
  }
 
-console.log(serviceDetails)
     return (
         history.location.pathname.includes('id')? 
         <ServiceDetailsPage services = {serviceDetails}/>

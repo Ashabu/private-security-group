@@ -22,7 +22,7 @@ const AnimatedSearch = (props) => {
 
     return (
         <div className = 'div-inp'>
-            <div style={{width: 603, position: 'relative', top: 10}}>
+            <div className = 'div-inp-wrap'>
                 
             <TypeWritter text = {text} callBack = {props.onSetIndex} />
             </div>

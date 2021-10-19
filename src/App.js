@@ -22,7 +22,6 @@ function App() {
       });
   };
 
-  console.log('activeLang')
 
   return (
     <div className="App">

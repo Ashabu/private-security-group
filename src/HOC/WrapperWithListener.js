@@ -1,9 +1,9 @@
-import React, { useEffect, useState, createRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const WrapperWithListener = (props) => {
-    const wrapper = createRef()
+    const wrapper = useRef()
 
-    const [isVisible, setIsVisible] = useState(false);
+   const [classs, setclasss] = useState(false);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScrollListener);
@@ -12,37 +12,50 @@ const WrapperWithListener = (props) => {
         }
     }, []);
 
-    const handleScrollListener = () => {
+    const handleScrollListener = (e) => {
         let element = wrapper.current;
-        console.log(element)
+      // console.log(element)
         if (handleElementVisibility(element)) {
-            setIsVisible(true);
-            return true;
+           // setIsVisible(true);
+           setclasss(true);
+            //return true;
         } else {
-            setIsVisible(false);
-            return false
+            setclasss(false);
+           // setIsVisible(false);
+            //return false
         };
     };
 
+    // const handleElementVisibility = (element) => {
+    //     const section = element;
+     
+    //     if(element) {
+    //         let domRect = section.getBoundingClientRect();
+    //         console.log('aqane, ===>', domRect)
+    //     if (((window.innerHeight
+    //         || document.documentElement.clientHeight) - domRect.top) >= 300) {
+    //        // console.log(element, ' ----> section is visible')
+    //         return true;
+    //     };
+    //   //  console.log( element, '---> section is not visible')
+    //     }
+    //     return false;
+    // };
     const handleElementVisibility = (element) => {
-        const section = element;
-        console.log('aqane, ===>', element)
-        if(element) {
+            const section = element;
             let domRect = section.getBoundingClientRect();
-
-        if ((domRect.top + (section.offsetHeight / 3) <= (window.innerHeight
-            || document.documentElement.clientHeight)) && domRect.bottom > (section.offsetHeight / 2.5)) {
-            console.log(element, ' ----> section is visible')
-            return true;
-        };
-        console.log( element, '---> section is not visible')
+    
+            if ((domRect.top + (section.offsetHeight / 3) <= (window.innerHeight
+                || document.documentElement.clientHeight)) && domRect.bottom > (section.offsetHeight / 2.5)) {
+                return true;
+            }
+            return false;
         }
-        return false;
-    };
-
-
+    
+let condit =  classs ?  'cont vis' : 'cont'
+//console.log(new Date().toTimeString(), wrapper.current)
     return (
-        <div ref={wrapper}  className = {props.className}>
+        <div ref={wrapper}  className = {condit}>
             {props.children}
         </div>
     );
