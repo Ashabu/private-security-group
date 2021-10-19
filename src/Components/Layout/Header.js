@@ -29,6 +29,20 @@ const Header = () => {
                             <Link to='/contact'>{Langs.contact}</Link>
                         </li>
                     </ul>
+                    <ul className = 'langs'>
+                        <li onClick={() => setLang('ka')}>
+                            <img  src='../../Assets/Images/Flags/flag-ge.svg' />
+                            <span>ქარ</span>
+                        </li>
+                        <li onClick={() => setLang('en')}>
+                            <img  src='../../Assets/Images/Flags/flag-us.svg' />
+                            <span>ENG</span>
+                        </li>
+                        <li onClick={() => setLang('ru')}>
+                            <img  src='../../Assets/Images/Flags/flag-ru.svg' />
+                            <span>RU</span>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
@@ -51,6 +65,7 @@ const Header = () => {
                             <Link to='/contact'>{Langs.contact}</Link>
                         </li>
                     </ul>
+                    
                 </div>
                 <div className='app-lang'>
                     <ul>

@@ -187,6 +187,23 @@
             display: block;
             
         }
+
+        .langs {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 50px;
+                margin: 5px 20px;
+            }
+            
+            li {
+                display: flex;
+                flex-direction: column;
+                color: #FFFFFF;
+                font: 18px;
+            }
+        }
     }
 }
 
@@ -215,7 +232,7 @@
     .app-footer {
         flex-direction: column;
         justify-content: center;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
         line-height: 20px;
         height: auto;

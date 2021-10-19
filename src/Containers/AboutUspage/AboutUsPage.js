@@ -12,13 +12,13 @@ const AboutUsPage = () => {
                 <div className='au-cont' >
 
                     <div className='au-cont-right'>
-                        <div className='text-ab-us animation1'>
+                        <div className='text-ab-us animation1a'>
                             <p>{Langs.aboutUsText1}</p>
                         </div>
-                        <div className='text-ab-us animation2'>
+                        <div className='text-ab-us animation2a'>
                             <p>{Langs.aboutUsText2}</p>
                         </div>
-                        <div className='text-ab-us animation3'>
+                        <div className='text-ab-us animation3a'>
                             <p>{Langs.aboutUsText3}</p>
                         </div>
                     </div>

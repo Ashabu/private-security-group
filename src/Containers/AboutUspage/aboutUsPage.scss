@@ -1,10 +1,10 @@
 .au-cont {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: calc(100vh - 178px);
     background-image: url('../../Assets/Images/about-us.png');
-    background-size: cover;
+    background-size: 100% 100%;
     overflow: hidden;
     
 
@@ -21,7 +21,8 @@
             padding: 15px;
             border-radius: 10px;
             margin:  10px;
-            max-width: 70%;
+            max-width: 970px;
+            width: 100%;
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
             background-color: #ffffffa3;
             position: relative;
@@ -33,22 +34,22 @@
                 line-height: 1.5;
             }
             
-            &.animation1 {
-                animation: text1 ease-in 2s
+            &.animation1a {
+                animation: text1a ease-in 2s
                 
             }
              
-            &.animation2 {
-                animation: text2 ease-in 2.5s
+            &.animation2a {
+                animation: text2a ease-in 2.5s
             }
              
-            &.animation3 {
-                animation: text3 ease-in 3s
+            &.animation3a {
+                animation: text3a ease-in 3s
             }
     }
 }
 }
-@keyframes text1 {
+@keyframes text1a {
     0% {
         right: 1500px;
     }
@@ -56,7 +57,7 @@
         right: 0;
     }
 }
-@keyframes text2 {
+@keyframes text2a {
     0% {
         right: 1500px;
     }
@@ -64,7 +65,7 @@
         right: 0;
     }
 }
-@keyframes text3 {
+@keyframes text3a {
     0% {
         right: 1500px;
     }
@@ -73,4 +74,18 @@
     }
 }
 
+@media(max-width: 1000px) {
+    .au-cont {
+        padding: 0 20px;
+        height: calc(100vh - 100px);
 
+        .au-cont-right {
+            .text-ab-us {
+                p {
+                    font-size: 16px; 
+                }
+            }
+        }
+    }
+}
+    
