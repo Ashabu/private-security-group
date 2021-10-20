@@ -5,7 +5,6 @@ import useWindowDimensions from '../../Hooks/WindowDimension';
 
 
 const TypeWritter = (props) => {
-    //let _string = "სად იმყოფება ჩემი ინტერესის ობიექტი? რა არის მისი საკონტაქტო, საპასპორტო და სხვა მონაცემები?";
     const {width, height} = useWindowDimensions();
 
     let textString = props.text;
@@ -45,18 +44,25 @@ const TypeWritter = (props) => {
             } else {
                 setIsFullWidht(false)
             }
-        } else if (width < 800 ) {
-            if(divResize.current.offsetWidth > 320) {
+        }else if(width < 379) {
+            if(divResize.current.offsetWidth > 260) {
                 setIsFullWidht(true);
             } else {
                 setIsFullWidht(false)
             }
         }
+         else if (width < 800 ) {
+            if(divResize.current.offsetWidth > 320) {
+                setIsFullWidht(true);
+            } else {
+                setIsFullWidht(false)
+            }
+        } 
        
         
     }, [stringArray])
 
-   
+   console.log('width', width)
 
     return (
         <div className={isFullWidth? 'type-writter swap' : 'type-writter'} ref = {divResize}>

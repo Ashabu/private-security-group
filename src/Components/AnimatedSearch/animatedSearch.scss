@@ -61,3 +61,34 @@
         }
     }
 }
+
+@media(max-width: 375px) {
+    .div-inp {
+        max-width: 100%;
+        height: 50px;
+        border: 4px solid #ffffff61;
+
+        .div-inp-wrap {
+                width: 300px;
+                position: relative;
+                top: 0;
+                .type-writter {
+                    padding: 4px 10px;
+                    .symbol {
+                        font-size: 13px;
+                    }
+                }
+        }
+
+        .loupe {
+           
+            padding: 10px;
+            border-left: 2px solid #ffffff61;
+            
+            img {
+                width: 30px;
+                height: 30px
+            };
+        }
+    }
+}

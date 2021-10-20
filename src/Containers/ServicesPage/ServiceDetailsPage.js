@@ -35,10 +35,10 @@ const ServiceDetailsPage = (props) => {
             return mainCls + 'jc-center-al-end'
         } else if (id === 12 ) {
             return mainCls + 'jc-end-al-start'
-        } else if (id === 12 )  {
-            return mainCls + 'jc-center-al-start'
+        } else if (id === 13 )  {
+            return mainCls + 'jc-start-al-center'
         }else if (id === 14 ) {
-            return mainCls + 'jc-center-al-start'
+            return mainCls + 'jc-start-al-start'
         } else {
             return mainCls
         }
