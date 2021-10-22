@@ -38,10 +38,8 @@ const HomePage = () => {
 
         if ((domRect.top + (section.offsetHeight / 3) <= (window.innerHeight
             || document.documentElement.clientHeight)) && domRect.bottom > (section.offsetHeight / 2.5)) {
-                console.log('section is visible')
             return true;
         }
-        console.log('section is not visible')
         return false;
     }
 

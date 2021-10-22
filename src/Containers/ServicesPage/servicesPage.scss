@@ -68,6 +68,10 @@
         display: flex;
         padding: 30px;
         font-weight: bold;
+
+        P {
+            font-size: 20px; 
+        }
        
     }
 }
@@ -80,7 +84,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         line-height: 1.6;
         color: #FFFFFF;
         max-width: 41ch;
@@ -96,7 +99,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 56ch;
@@ -111,7 +113,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 46ch;
@@ -126,7 +127,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 60ch;
@@ -141,7 +141,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 54ch;
@@ -156,7 +155,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;;
         max-width: 55ch;
@@ -167,11 +165,10 @@
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #cfcfcf;
-    background-color: #ffffffd4;
+    background-color: #ffffff52;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 80ch;
@@ -185,7 +182,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #FFFFFF;
         line-height: 1.6;
         max-width: 57ch;
@@ -200,7 +196,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 76ch;
@@ -209,7 +204,7 @@
 }
 
 .se-det-text-10 {
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     margin: 0 0 200px 90px;
     border: 1px solid #cfcfcf;
@@ -217,7 +212,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #000;
         line-height: 1.6;
         max-width: 44ch;
@@ -225,14 +219,12 @@
 }
 
 .se-det-text-11 {
-    padding: 20px;
     border-radius: 10px;
     border: 1px solid #cfcfcf;
     background-color: #ffffff1f;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #FFFFFF;
         line-height: 1.6;
         max-width: 126ch;
@@ -247,7 +239,6 @@
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     p {
-        font-size: 20px; 
         color: #FFFFFF;
         line-height: 1.6;
         max-width: 57ch;
@@ -313,6 +304,33 @@
         }
     }
 }
+
+
+@media (max-width: 1366px) {
+   
+    .se-cont-det {
+        .se-cont-details {
+            padding: 10px; 
+            P {
+                font-size: 16px; 
+            }
+        }
+    }
+
+    .se-det-text-7 {
+        padding: 10px;
+        p {
+            line-height: 1.45;
+        }
+    }
+
+    .se-det-text-10 {
+        margin: 0 0 160px 50px;
+    }
+}
+
+
+
 
 
 @media (max-width: 1000px) {

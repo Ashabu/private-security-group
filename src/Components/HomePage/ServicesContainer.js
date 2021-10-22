@@ -87,9 +87,7 @@ const ServicesContainer = (props) => {
         }
     }
 
-    useEffect(() => {
-        console.log('mounted')
-    }, [0])
+   
 
     return (
         <div id="service-cont" className='cont'>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState, useReducer} from 'react';
 import './animatedSearch.scss';
 import TypeWritter from '../TypeWritter/TypeWritter';
 import { AppContext } from '../../Context/AppContext';
@@ -35,10 +35,17 @@ const AnimatedSearch = (props) => {
     ]
 
     const [text, setText ] = useState(texts[0][activeLang]);
+    const [, forceUpdate]  = useReducer(x => x + 1, 0);
 
     useEffect(() => {
         setText(texts[props.index][activeLang])
-    }, [props.index, activeLang])
+    }, [props.index])
+
+    // useEffect(() => {
+    //     setText(text);
+    //     forceUpdate();
+        
+    // }, [activeLang])
    
 
     return (

@@ -62,7 +62,6 @@ const TypeWritter = (props) => {
         
     }, [stringArray])
 
-   console.log('width', width)
 
     return (
         <div className={isFullWidth? 'type-writter swap' : 'type-writter'} ref = {divResize}>

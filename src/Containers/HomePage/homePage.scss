@@ -306,9 +306,20 @@
         height: 815px;
 
         .with-bg {
-
+            margin: unset;
             &:first-child {
                 top: -18px;
+            }
+            p {
+                font-size: 14px;
+            }
+
+            &.animation3 {
+                p{
+                    &:first-child {
+                        top: -50px;
+                    }
+                }
             }
         }
     }
@@ -346,6 +357,15 @@
 }
 
 @media (max-width: 1366px) {
+    .cont-1-wrap {
+        height: 548px;
+
+        .cont-body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
     .cont {
         &.cont-2 {
             height: unset;

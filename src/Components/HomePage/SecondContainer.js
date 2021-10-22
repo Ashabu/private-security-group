@@ -7,7 +7,6 @@ const SecondContainer = (props) => {
 
     const {Langs} = useContext(AppContext);
 
-    console.log(Langs.thirdContText3)
 
     return (
         <div id="service-cont" className='cont cont-2'  >

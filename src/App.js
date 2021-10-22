@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import './App.scss';
 import axios from 'axios';
 import { AppContext } from './Context/AppContext';
@@ -7,10 +7,12 @@ import Routing from './Routing/Routing';
 
 function App() {
   const { activeLang, setAppLangs } = useContext(AppContext);
-
+  const [, forceUpdate]  = useReducer(x => x + 1, 0);
+  
 
   useEffect(() => {
     setAppLang();
+    forceUpdate();
   }, [activeLang])
 
   const setAppLang = () => {
