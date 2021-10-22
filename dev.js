@@ -1,5 +1,5 @@
 module.exports = {
     "base_URL": "/",
-    "api_URL": "http://pasgroup.ge",
+    "api_URL": "https://pasgroup.ge",
     "translate_Version": 1,
 };

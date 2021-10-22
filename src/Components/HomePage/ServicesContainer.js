@@ -9,9 +9,9 @@ const services = [
     {
         title:
             [{
-                ka: "კერძო პირის გამოძიება",
-                en: "Identification of data of a natural person ",
-                ru: "Идентификация данных физического лица"
+                ka: "კერძო სახის გამოძიება",
+                en: "Private investigation ",
+                ru: "Расследование частного типа"
             }],
         imgUrl: "11a",
         id: 2
