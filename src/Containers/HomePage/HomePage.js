@@ -11,18 +11,18 @@ import { AppContext } from '../../Context/AppContext';
 const HomePage = () => {
 
     const [isVisible, setIsVisible] = useState(false);
-   
+
 
     useEffect(() => {
-       window.addEventListener('scroll', handleScrollListener);
+        window.addEventListener('scroll', handleScrollListener);
         return () => {
-           window.removeEventListener('scroll', handleScrollListener)
+            window.removeEventListener('scroll', handleScrollListener)
         }
     }, [])
 
     const handleScrollListener = () => {
         let element = document.getElementById('service-cont');
-        if(handleElementVisibility(element)) {
+        if (handleElementVisibility(element)) {
             setIsVisible(true);
             return true;
         } else {
@@ -43,21 +43,21 @@ const HomePage = () => {
         return false;
     }
 
-    
 
 
 
 
-return (
-    <Layout>
-        <Firstcontainer />
-        <ServicesContainer visible = {isVisible}/>
-        <SecondContainer visible = {isVisible}/>
-        <ThirdContainer />
-        <FourthContainer />
 
-    </Layout>
-);
+    return (
+        <Layout>
+            <Firstcontainer />
+            <ServicesContainer visible={isVisible} />
+            <SecondContainer visible={isVisible} />
+            <ThirdContainer />
+            <FourthContainer />
+
+        </Layout>
+    );
 }
 
 export default HomePage;

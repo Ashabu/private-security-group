@@ -1,9 +1,18 @@
-import React, { Fragment } from 'react';
+import React, {useEffect, Fragment } from 'react';
 import './layout.scss';
 import Footer from './Footer';
 import Header from './Header';
+import ReactGA from 'react-ga';
+import { withRouter } from 'react-router';
 
+
+ReactGA.initialize(globalConfig.react_GA_TRACKING_ID);
 const Layout = (props) => {
+
+    useEffect(()=>{
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    });
+    
     return (
         <Fragment>
             <Header />
@@ -18,4 +27,4 @@ const Layout = (props) => {
     );
 };
 
-export default Layout;
+export default withRouter(Layout);
